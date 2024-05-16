@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -35,4 +35,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.json-container {
+  height: 1000px;
+  overflow: scroll;
+  padding: 5px;
+}
+
+.svg-container {
+  border: 5px solid blue;
+}
+
+svg {
+  border: 3px solid gray;
+}
+
+.editor-half{
+  display: flex;
+  flex-grow: 1;
 }

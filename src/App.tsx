@@ -6,7 +6,6 @@ import Diagrammer from "./components/Diagrammer";
 function App() {
   return (
     <div className="App">
-      <h1>Diagrammer</h1>
 
       <Diagrammer/>
     </div>
