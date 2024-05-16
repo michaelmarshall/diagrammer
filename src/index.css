@@ -15,3 +15,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.html-diagram {
+  background: darkred;
+}
+
+.html-diagram div {
+  margin: 5px;
+}
+
+
+
+
+.svg-container {
+  border: 5px solid blue;
+}
+
+svg {
+  border: 3px solid gray;
+}
+
+.editor-half{
+  display: flex;
+  flex-grow: 1;
+}
+
+.yaml-container {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.json-container {
+  width: 50%;
+  flex-grow: 1;
+  height: 1000px;
+  overflow: scroll;
+  padding: 5px;
+}

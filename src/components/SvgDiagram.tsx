@@ -33,6 +33,7 @@ const SvgDiagram: React.FC<SvgDiagramProps> = ({ jsonData }) => {
   };
 
   useEffect(() => {
+    setRectangles([])
     iterateJsonObject(jsonData, 10, 10);
   }, [jsonData]);
 

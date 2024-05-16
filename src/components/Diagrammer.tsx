@@ -4,6 +4,7 @@ import YamlEditor from "./YamlEditor";
 import JsonViewer from "./JsonViewer";
 import SvgDiagram from "./SvgDiagram";
 import { defaultText } from "./common";
+import HtmlDiagram from "./HtmlDiagram";
 
 const Diagrammer: React.FC = () => {
   const [yamlText, setYamlText] = useState<string>(defaultText);
@@ -26,7 +27,7 @@ const Diagrammer: React.FC = () => {
       <h1>Diagrammer</h1>
 
       <div className="editor-half">
-        <div>
+        <div className="yaml-container">
           <YamlEditor yamlText={yamlText} onYamlChange={handleYamlChange} />
         </div>
 
@@ -38,6 +39,10 @@ const Diagrammer: React.FC = () => {
           )}
         </div>
       </div>
+
+      {/* <div className="html-diagram">
+        <HtmlDiagram jsonData={jsonData} />
+      </div> */}
 
       <div>
         <SvgDiagram jsonData={jsonData} />
