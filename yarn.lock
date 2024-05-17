@@ -3268,6 +3268,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jsonpath@npm:^0.2.4":
+  version: 0.2.4
+  resolution: "@types/jsonpath@npm:0.2.4"
+  checksum: 10/401c59dd26eb47e59af10a558788e6d69600adfafec134bf0691a48a80f1ee4f61afaa235663d043c20d7de6f036037731f8289e9662a031bf460a22f156638b
+  languageName: node
+  linkType: hard
+
 "@types/mime@npm:^1":
   version: 1.3.5
   resolution: "@types/mime@npm:1.3.5"
@@ -5704,10 +5711,12 @@ __metadata:
     "@testing-library/user-event": "npm:^13.2.1"
     "@types/jest": "npm:^27.0.1"
     "@types/js-yaml": "npm:^4"
+    "@types/jsonpath": "npm:^0.2.4"
     "@types/node": "npm:^16.7.13"
     "@types/react": "npm:^18.0.0"
     "@types/react-dom": "npm:^18.0.0"
     js-yaml: "npm:^4.1.0"
+    jsonpath: "npm:^1.1.1"
     monaco-editor: "npm:^0.48.0"
     monaco-yaml: "npm:^5.1.1"
     react: "npm:^18.3.1"

@@ -33,10 +33,12 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/user-event", "virtual:81a68812d5b7365b794aa1e0093cf7979d3e72ee39cfaaf739c57867e080e72548bbc7c55702d8e9ec686c2ed62a03c707f9a9d211dae040538a38eb44f843c1#npm:13.5.0"],\
           ["@types/jest", "npm:27.5.2"],\
           ["@types/js-yaml", "npm:4.0.9"],\
+          ["@types/jsonpath", "npm:0.2.4"],\
           ["@types/node", "npm:16.18.97"],\
           ["@types/react", "npm:18.3.2"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["js-yaml", "npm:4.1.0"],\
+          ["jsonpath", "npm:1.1.1"],\
           ["monaco-editor", "npm:0.48.0"],\
           ["monaco-yaml", "virtual:81a68812d5b7365b794aa1e0093cf7979d3e72ee39cfaaf739c57867e080e72548bbc7c55702d8e9ec686c2ed62a03c707f9a9d211dae040538a38eb44f843c1#npm:5.1.1"],\
           ["react", "npm:18.3.1"],\
@@ -5222,6 +5224,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/jsonpath", [\
+      ["npm:0.2.4", {\
+        "packageLocation": "./.yarn/cache/@types-jsonpath-npm-0.2.4-9d28ca8478-401c59dd26.zip/node_modules/@types/jsonpath/",\
+        "packageDependencies": [\
+          ["@types/jsonpath", "npm:0.2.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/mime", [\
       ["npm:1.3.5", {\
         "packageLocation": "./.yarn/cache/@types-mime-npm-1.3.5-48d28990db-e29a5f9c47.zip/node_modules/@types/mime/",\
@@ -8352,10 +8363,12 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/user-event", "virtual:81a68812d5b7365b794aa1e0093cf7979d3e72ee39cfaaf739c57867e080e72548bbc7c55702d8e9ec686c2ed62a03c707f9a9d211dae040538a38eb44f843c1#npm:13.5.0"],\
           ["@types/jest", "npm:27.5.2"],\
           ["@types/js-yaml", "npm:4.0.9"],\
+          ["@types/jsonpath", "npm:0.2.4"],\
           ["@types/node", "npm:16.18.97"],\
           ["@types/react", "npm:18.3.2"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["js-yaml", "npm:4.1.0"],\
+          ["jsonpath", "npm:1.1.1"],\
           ["monaco-editor", "npm:0.48.0"],\
           ["monaco-yaml", "virtual:81a68812d5b7365b794aa1e0093cf7979d3e72ee39cfaaf739c57867e080e72548bbc7c55702d8e9ec686c2ed62a03c707f9a9d211dae040538a38eb44f843c1#npm:5.1.1"],\
           ["react", "npm:18.3.1"],\

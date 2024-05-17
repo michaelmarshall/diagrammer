@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import * as jsonpath from "jsonpath";
 
 interface SvgDiagramProps {
   jsonData: any;
@@ -6,19 +7,29 @@ interface SvgDiagramProps {
 
 const SvgDiagram: React.FC<SvgDiagramProps> = ({ jsonData }) => {
   const [rectangles, setRectangles] = useState<JSX.Element[]>([]);
+  const scrollableRef = useRef<HTMLDivElement>(null);
+
   let counter = 1;
 
-  const iterateJsonObject = (obj: any, x: number, y: number) => {
+  let result: any;
+  const canvasWidth = 2500;
+  const canvasHeight = 2500;
 
+  if (jsonData) {
+    result = jsonpath.query(jsonData, "$..VisualDictionary[0]");
+  }
+  // console.log(result);
+
+  const iterateJsonObject = (obj: any, x: number, y: number) => {
     if (obj) {
       Object.entries(obj).forEach(([key, value], index) => {
-        counter++
+        counter++;
         const rect = (
           <rect
             key={`${x}-${y}-${counter}`}
             width="10"
             height="10"
-            x={x + counter * 12}
+            x={canvasWidth - (x + counter * 12)}
             y={y}
             fill="blue"
           />
@@ -33,13 +44,24 @@ const SvgDiagram: React.FC<SvgDiagramProps> = ({ jsonData }) => {
   };
 
   useEffect(() => {
-    setRectangles([])
+    if (scrollableRef.current){
+      scrollableRef.current.scrollLeft = scrollableRef.current.scrollWidth;
+    }
+  });
+
+  useEffect(() => {
+    setRectangles([]);
     iterateJsonObject(jsonData, 10, 10);
   }, [jsonData]);
 
   return (
-    <div className="svg-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width={1500} height={1000}>
+    <div className="svg-container" ref={scrollableRef}>
+      {/* {result && JSON.stringify(result)} */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={canvasWidth}
+        height={canvasHeight}
+      >
         {rectangles}
       </svg>
     </div>

@@ -1,7 +1,7 @@
 export const defaultText = 
 `---
 DiscourseUnit: 
-  Visual Dictionary:
+  VisualDictionary:
     - Fragment: 
         Simple noun phrase:
         noun: 
