@@ -46,5 +46,7 @@
   "packageManager": "yarn@4.2.2",
   "devDependencies": {
     "@types/js-yaml": "^4"
-  }
+  },
+  "homepage": "docs"
+
 }
