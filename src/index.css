@@ -21,7 +21,7 @@ code {
 .editor-half{
   display: flex;
   /* flex-grow: 1; */
-  /* height: 500px; */
+  height: 500px;
   overflow: scroll;
 }
 
