@@ -9,6 +9,7 @@ import HtmlDiagram from "./HtmlDiagram";
 const Diagrammer: React.FC = () => {
   const [yamlText, setYamlText] = useState<string>(defaultText);
   const [jsonData, setJsonData] = useState<object | null>(null);
+  const [errorData, setErrorData] = useState<string | null>(null);
 
   const handleYamlChange = (newYamlText: string) => {
     setYamlText(newYamlText);
@@ -16,9 +17,10 @@ const Diagrammer: React.FC = () => {
     try {
       const parsedJson = yaml.load(newYamlText);
       setJsonData(parsedJson as {});
+      setErrorData(null);
     } catch (error) {
-      console.error("Error parsing YAML:", error);
-      setJsonData(error as {});
+      // console.error("Error parsing YAML:", error);
+      setErrorData((error as any).reason);
     }
   };
 
@@ -26,11 +28,17 @@ const Diagrammer: React.FC = () => {
     <div>
       <h1>Diagrammer</h1>
 
-      <div className="editor-half">
-        <div className="yaml-container">
-          <YamlEditor yamlText={yamlText} onYamlChange={handleYamlChange} />
-        </div>
+      <div className="yaml-container">
+        <YamlEditor yamlText={yamlText} onYamlChange={handleYamlChange} />
+      </div>
 
+      <div>
+        <div className="error-container">
+          {errorData}
+        </div>
+      </div>
+
+      <div>
         <div className="json-container">
           {jsonData ? (
             <JsonViewer jsonData={jsonData} />
