@@ -170,5 +170,365 @@ DiscourseUnit:
             particle: 
               - סֶלָה 
               - selah
-
+    - DiscourseUnit: 
+      name: v. 4
+      Fragments:
+        - Fragment:
+            conjunction: וְ and>>but
+        - Fragment:
+            name: substantival ptc w/ obj, like Ps 91:2
+            Clause:
+              Subject:
+                Apposition:
+                  Items:
+                    - noun: 
+                      - יְהוָה 
+                      - YHWH
+                    - noun: 
+                      - אַתָּה 
+                      - you
+              Predicate:
+                Complement:
+                  Apposition:
+                    Items:
+                      - Nominal:
+                          noun: 
+                            - מָגֵן 
+                            - shield
+                          Adjectival:
+                            PrepositionalPhrase:
+                              Preposition:
+                                preposition: 
+                                  - בַּעֲדִ 
+                                  - around
+                              Object:
+                                suffix-pronoun: 
+                                  - י 
+                                  - me
+                      - Nominal:
+                          ConstructChain:
+                            noun: 
+                              - כְּבוֹדִ 
+                              - honour
+                            suffix-pronoun: 
+                              - י 
+                              - me
+                          Conjunction:
+                            conjunction: 
+                              - וּ 
+                              - and
+                      - Nominal:
+                          Clause:
+                            Predicate:
+                              verb-participle: 
+                                - מֵרִים 
+                                - lifts
+                              Object:
+                                ConstructChain:
+                                  noun: 
+                                    - רֹאשִׁ 
+                                    - head
+                                  suffix-pronoun: 
+                                    - י 
+                                    - me
+    - DiscourseUnit:
+        name: v. 5
+        Fragments:
+          - Fragment:
+              ClauseCluster:
+                Items: 
+                  - Clause:
+                      Predicate:
+                        Items:
+                          - verb: 
+                              - אֶקְרָא 
+                              - I cry out
+                          - Adverbial:
+                              PrepositionalPhrase:
+                                Preposition:
+                                  preposition: 
+                                    - אֶל 
+                                    - to
+                                Object:
+                                  noun: 
+                                    - יְהוָה 
+                                    - YHWH
+                          - Adverbial:
+                              ConstructChain:
+                                noun: 
+                                  - קוֹלִ 
+                                  - voice
+                                suffix-pronoun: 
+                                  - י 
+                                  - me
+                  - Conjunction:
+                      conjunction: 
+                        - וַ 
+                        - and
+                  - Clause:
+                      Predicate:
+                        verb: 
+                          - יַּעֲנֵ 
+                          - he responds
+                        Object:
+                          suffix-pronoun:
+                            - נִי 
+                            - me
+                        Adverbial:
+                          PrepositionalPhrase:
+                            Preposition:
+                              preposition: 
+                                - מֵ 
+                                - from
+                            Object:
+                              ConstructChain:
+                                noun: 
+                                  - הַר 
+                                  - mountain
+                                ConstructChain:
+                                  noun: 
+                                    - קָדְשׁ 
+                                    - holy
+                                  suffix-pronoun: 
+                                    - וֹ 
+                                    - him
+          - Fragment:
+              particle: סֶלָה selah
+    - DiscourseUnit: 
+        name: v. 6
+        Items:
+          - Fragment:
+              Clause:
+                Subject:
+                  noun: 
+                    - אֲנִי 
+                    - I
+                Predicate:
+                  Items:
+                    - Predicate:
+                        verb: 
+                          - שָׁכַבְתִּי 
+                          - lay down
+                    - Conjunction: 
+                        conjunction: 
+                          - וָ 
+                          - and
+                    - Predicate:
+                        verb: 
+                          - אִישָׁנָה 
+                          - fell asleep
+          - Fragment:
+              name: separated contra previous diagram because there is no conjunction
+              Clause:
+                Predicate:
+                  verb: 
+                    - הֱקִיצוֹתִי 
+                    - I woke up
+                SubordinateClause:
+                  Conjunction:
+                    conjunction: 
+                      - כִּי 
+                      - for
+                  Clause:
+                    Subject:
+                      noun: 
+                        - יְהוָה 
+                        - YHWH
+                    Predicate:
+                      verb: 
+                        - יִסְמְכֵ 
+                        - supports
+                      Object:
+                        suffix-pronoun: 
+                          - נִי 
+                          - me
+    - DiscourseUnit:
+        name: v. 7
+        Fragment:
+          Clause:
+            Predicate:
+              Items:
+                - verb: 
+                    - אִירָא 
+                    - I will be afraid
+                - Adverbial:
+                    particle: 
+                      - לֹא 
+                      - not
+                - Adverbial:
+                    PrepositionalPhrase:
+                      Preposition:
+                        preposition: 
+                          - מֵ 
+                          - from>>of
+                      Object:
+                        ConstructChain:
+                          noun: 
+                            - רִבְבוֹת 
+                            - myriads
+                          Nominal:
+                            noun: 
+                              - עָם 
+                              - people
+                            RelativeClause:
+                              RelativeParticle:
+                                particle: 
+                                  - אֲשֶׁר 
+                                  - who
+                              Clause:
+                                Subject:
+                                  Relative: 
+                                Predicate:
+                                  verb: 
+                                    - שָׁתוּ 
+                                    - have taken position
+                                  adverb: 
+                                    - סָבִיב 
+                                    - all around
+                                  Adverbial:
+                                    PrepositionalPhrase:
+                                      Preposition:
+                                        preposition: 
+                                          - עָלָ 
+                                          - against
+                                      Object:
+                                        suffix-pronoun: 
+                                          - י 
+                                          - me
+    - DiscourseUnit:
+        name: v. 8
+        Items:
+          - Fragment:
+              Clause:
+                Subject:
+                  Vocative:
+                    noun: 
+                      - יְהוָה 
+                      - YHWH
+                Predicate:
+                  verb: 
+                    - קוּמָה 
+                    - rise up
+          - Fragment:
+              Clause:
+                Subject:
+                  Vocative:
+                    Nominal:
+                      ConstructChain:
+                        noun: 
+                          - אֱלֹהַ 
+                          - God
+                        suffix-pronoun: 
+                          - י 
+                          - me
+                Predicate:
+                  verb: 
+                    - הוֹשִׁיעֵ 
+                    - save
+                  Object:
+                    suffix-pronoun: 
+                      - נִי 
+                      - me
+                SubordinateClause:
+                  Conjunction:
+                    conjunction: 
+                      - כִּי 
+                      - for
+                  Clause:
+                    Predicate:
+                      verb: 
+                        - הִכִּיתָ 
+                        - you have struck
+                      Object:
+                        particle: 
+                          - אֶת 
+                          - (d.o.m.)
+                        Nominal:
+                          ConstructChain:
+                            Items:
+                              - Nominal:
+                                  quantifier: 
+                                    - כָּל 
+                                    - all
+                              - Nominal:
+                                  ConstructChain:
+                                    noun: 
+                                      - אֹיְבַ 
+                                      - enemies
+                                    suffix-pronoun: 
+                                      - י 
+                                      - me
+                      Adverbial:
+                        noun: 
+                          - לֶחִי 
+                          - jaw>>on the jaw
+          - Fragment:
+              name: separated contra previous diagram because no conjunction with previous clause
+              Clause:
+                Predicate:
+                  verb: 
+                    - שִׁבַּרְתָּ 
+                    - you have broken
+                  Object:
+                    ConstructChain:
+                      noun: 
+                        - שִׁנֵּי 
+                        - teeth
+                      Nominal:
+                        noun: 
+                          - () 
+                          - (people)
+                        adjective: 
+                          - רְשָׁעִים 
+                          - wicked
+    - DiscourseUnit:
+        name: v. 9
+        Items:
+          - Fragment:
+              Clause:
+                Subject:
+                  article: 
+                    - הַ 
+                    - the
+                  noun: 
+                    - יְשׁוּעָה 
+                    - salvation
+                Complement:
+                  PrepositionalPhrase:
+                    Preposition:
+                      preposition: 
+                        - לַ 
+                        - to
+                    Object:
+                      noun: 
+                        - יהוָה 
+                        - YHWH
+          - Fragment:
+              Clause:
+                Subject:
+                  ConstructChain:
+                    noun: 
+                      - בִרְכָתֶ 
+                      - blessing
+                    suffix-pronoun: 
+                      - ךָ 
+                      - you
+                Complement:
+                  PrepositionalPhrase:
+                    Preposition:
+                      preposition: 
+                        - עַל 
+                        - on
+                    Object:
+                      ConstructChain:
+                        noun: 
+                          - עַמְּ 
+                          - people
+                        suffix-pronoun: 
+                          - ךָ 
+                          - you
+          - Fragment:
+              particle: 
+                - סֶּלָה 
+                - selah
 `;
