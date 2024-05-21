@@ -1,7 +1,7 @@
 export const defaultText = `
 DiscourseUnit:
   name: Psalm 3; all phrase-level glosses are drafts
-  DiscourseUnits:
+  Items:
     - DiscourseUnit:
         name: v. 1
         Fragment: 
@@ -59,7 +59,7 @@ DiscourseUnit:
                                             - him
     - DiscourseUnit:
         name: v. 2
-        Fragments:
+        Items:
           - Fragment:
               Vocative:
                 noun: 
@@ -106,7 +106,7 @@ DiscourseUnit:
                       - 
     - DiscourseUnit:
       name: v. 3
-      Fragments:
+      Items:
         - Fragment:
             name: substantival ptc w/ obj, like Ps 91:2
             Clause:
@@ -172,7 +172,7 @@ DiscourseUnit:
               - selah
     - DiscourseUnit: 
       name: v. 4
-      Fragments:
+      Items:
         - Fragment:
             conjunction: וְ and>>but
         - Fragment:
@@ -233,7 +233,7 @@ DiscourseUnit:
                                     - me
     - DiscourseUnit:
         name: v. 5
-        Fragments:
+        Items:
           - Fragment:
               ClauseCluster:
                 Items: 
