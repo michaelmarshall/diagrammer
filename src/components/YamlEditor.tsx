@@ -21,6 +21,7 @@ const YamlEditor: React.FC<YamlEditorProps> = ({ yamlText, onYamlChange }) => {
       {
         value: yamlText,
         language: "yaml",
+        tabSize: 2,
         theme: "vs-dark",
         minimap: { enabled: false },
         automaticLayout: true,
@@ -56,7 +57,7 @@ const YamlEditor: React.FC<YamlEditorProps> = ({ yamlText, onYamlChange }) => {
 
   const editorStyle: React.CSSProperties = {
     width: "100%",
-    minHeight: "500px",
+    minHeight: "1000px",
     borderTop: isValid ? "0px solid #ccc" : "5px solid red",
     borderBottom: isValid ? "0px solid #ccc" : "5px solid red",
   };

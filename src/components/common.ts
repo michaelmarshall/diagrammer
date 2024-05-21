@@ -1,134 +1,174 @@
-export const defaultText = 
-`---
+export const defaultText = `
 DiscourseUnit:
-  name: "Psalms 19, v. 2"
-  fragments:
-    "v. 2":
-        - Clause:
-            asdf: asdf
-        - Conjunction:
-            asdf: asdf
-        - Clause:
-            asdf: asdf
-`;
+  name: Psalm 3; all phrase-level glosses are drafts
+  DiscourseUnits:
+    - DiscourseUnit:
+        name: v. 1
+        Fragment: 
+          name: moved מִפְּנֵי אַבְשָׁלוֹם בְּנ to adverbially modify ברח instead of adjectivally modifying the object of the preposition
+          Clause:
+            Subject:
+              noun: מִזְמוֹר a psalm
+              Adjectival:
+                PrepositionalPhrase:
+                  Preposition:
+                    preposition: לְ by
+                  Object:
+                    noun: 
+                      - דָוִד 
+                      - David
+                  Complement:
+                    PrepositionalPhrase:
+                      Preposition:
+                          preposition: 
+                              - בְּ 
+                              - when
+                      Object:
+                        Clause:
+                          Subject:
+                          Predicate:
+                            ConstructChain:
+                              verb-infinitive: 
+                                - בָרְח 
+                                - fled
+                              suffix-pronoun: 
+                                - וֹ 
+                                - he
+                            Adverbial:
+                              PrepositionalPhrase:
+                                Preposition:
+                                  preposition: 
+                                    - מִ 
+                                    - from
+                                Object:         
+                                  ConstructChain:
+                                    noun: 
+                                      - פְּנֵי  
+                                      - the presence
+                                    Apposition:
+                                      noun: 
+                                        - אַבְשָׁלוֹם 
+                                        - Absalom
+                                      Nominal:
+                                        ConstructChain:
+                                          noun: 
+                                            - בְּנ 
+                                            - son
+                                          suffix-pronoun: 
+                                            - וֹ 
+                                            - him
+    - DiscourseUnit:
+        name: v. 2
+        Fragments:
+          - Fragment:
+              Vocative:
+                noun: 
+                  - יְהוָה 
+                  - YHWH
+          - Fragment:
+              Clause:
+                Subject:
+                  ConstructChain:
+                    noun: 
+                      - צָרָ 
+                      - adversaries
+                    suffix-pronoun: 
+                      - י 
+                      - me
+                Predicate:
+                  verb: 
+                    - רַבּוּ 
+                    - have multiplied
+                  adverb: 
+                    - מָה 
+                    - how
+          - Fragment:
+              Clause:
+                Subject:
+                  Nominal:
+                    verb-participle: 
+                      - קָמִים 
+                      - those rising
+                  Adjectival:
+                    PrepositionalPhrase:
+                      Preposition:
+                        preposition: 
+                          - עָלָ 
+                          - against
+                      Object:
+                        suffix-pronoun: 
+                          - י 
+                          - me
+                Predicate:
+                  Complement:
+                    noun: 
+                      - רַבִּים 
+                      - 
+    - DiscourseUnit:
+      name: v. 3
+      Fragments:
+        - Fragment:
+            name: substantival ptc w/ obj, like Ps 91:2
+            Clause:
+              Subject:
+                Clause:
+                  Predicate:
+                    verb-participle: 
+                      - אֹמְרִים 
+                      - those saying
+                    Adverbial:
+                      PrepositionalPhrase:
+                        Preposition:
+                          preposition: 
+                            - לְ 
+                            - about
+                        Object:
+                          ConstructChain:
+                            noun: 
+                              - נַפְשִׁ 
+                              - soul
+                            suffix-pronoun: 
+                              - י 
+                              - me
+                    Object:
+                      Clause:
+                        Subject:
+                          noun: 
+                            - יְשׁוּעָתָה 
+                            - salvation
+                        Predicate:
+                          Adverbial:
+                            noun: 
+                              - אֵין 
+                              - there is no
+                          Complement:
+                            PrepositionalPhrase:
+                              Preposition:
+                                preposition: 
+                                  - לּ 
+                                  - for
+                              Object:
+                                suffix-pronoun: 
+                                  - וֹ 
+                                  - him
+                            Adjectival:
+                              PrepositionalPhrase:
+                                Preposition:
+                                  preposition: 
+                                    - בֵ 
+                                    - in
+                                Object:
+                                  noun: 
+                                    - אלֹהִים 
+                                    - God
+              Predicate:
+                Complement:
+                  noun: 
+                    - רַבִּים 
+                    - many
+        - Fragment:
+            particle: 
+              - סֶלָה 
+              - selah
 
-// export const defaultText = 
-// `---
-// DiscourseUnit: 
-//   VisualDictionary:
-//     - Fragment: 
-//         Simple noun phrase:
-//         noun: 
-//           דבר 
-//           theme
-//     - Fragment: 
-//         Modified noun phrase:
-//           Nominal:
-//             noun: 
-//               דבר 
-//               theme
-//             adjective: 
-//               טוב 
-//               noble
-//     - Fragment: 
-//         Definite noun phrase:
-//           Nominal:
-//             article: 
-//               ה 
-//               the
-//             noun: 
-//               דבר 
-//               theme
-//     - Fragment: 
-//         Definite modified noun phrase:
-//           Nominal:
-//             article: 
-//               ה 
-//               the
-//             noun: 
-//               דבר 
-//               theme
-//           Adjectival:
-//             article: 
-//               ה 
-//               the
-//             adjective: 
-//               טוב 
-//               noble
-//     - Fragment: 
-//         Substantival adjective:
-//           Nominal:
-//             adjective: 
-//               טוב 
-//               noble
-//     - Fragment: 
-//         Substantival definite adjective:
-//           Nominal:
-//             article: 
-//               ה 
-//               the
-//             adjective: 
-//               טוב 
-//               noble
-//     - Fragment: 
-//         Quantifier with simple noun:
-//           Nominal:
-//             quantifier: 
-//               כל 
-//               all
-//             noun: 
-//               עבדים 
-//               servants
-//     - Fragment: 
-//         Quantifier with a construct chain:
-//           Nominal:
-//             quantifier: 
-//               כל 
-//               all
-//             ConstructChain:
-//               - noun: 
-//                   עבדים 
-//                   servants
-//               - noun: 
-//                   יהוה 
-//                   YHWH
-//     - Fragment: 
-//         Quantifier with a construct chain and modifier:
-//           Nominal:
-//             quantifier: 
-//               כל 
-//               all
-//             ConstructChain:
-//               Nominal:
-//                 noun: 
-//                   עבדים 
-//                   servants
-//                 Adjectival:
-//                   verb-participle: 
-//                     עמדים 
-//                     standing
-//               noun: 
-//                 יהוה 
-//                 YHWH
-//     - Fragment: 
-//         Quantifier with a definite construct chain and modifier:
-//           Nominal:
-//             quantifier: 
-//               כל 
-//               all
-//             ConstructChain:
-//               Nominal:
-//                 noun: 
-//                   עבדים 
-//                   servants
-//                 Adjectival:
-//                   article: 
-//                     ה 
-//                     the
-//                   verb-participle: 
-//                     עמדים 
-//                     standing
-//               noun: 
-//                 יהוה 
-//                 YHWH
-// `;
+`;
