@@ -26,9 +26,10 @@ const Diagrammer: React.FC = () => {
 
   return (
     <div>
-      <h1>Diagrammer</h1>
+      <h1>Hebrew Diagrammer</h1>
 
       <div className="yaml-container">
+        <h2>YAML</h2>
         <YamlEditor yamlText={yamlText} onYamlChange={handleYamlChange} />
       </div>
 
@@ -40,6 +41,7 @@ const Diagrammer: React.FC = () => {
 
       <div>
         <div className="json-container">
+          <h2>JSON</h2>
           {jsonData ? (
             <JsonViewer jsonData={jsonData} />
           ) : (
@@ -53,6 +55,7 @@ const Diagrammer: React.FC = () => {
       </div> */}
 
       <div>
+        <h2>SVG</h2>
         <SvgDiagram jsonData={jsonData} />
       </div>
     </div>
