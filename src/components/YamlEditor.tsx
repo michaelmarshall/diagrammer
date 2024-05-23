@@ -42,7 +42,7 @@ const YamlEditor: React.FC<YamlEditorProps> = ({ yamlText, onYamlChange }) => {
 
     setEditor(monacoEditor);
 
-    onYamlChange(yamlText)
+    onYamlChange(yamlText);
 
     return () => {
       monacoEditor.dispose();
@@ -62,7 +62,12 @@ const YamlEditor: React.FC<YamlEditorProps> = ({ yamlText, onYamlChange }) => {
     borderBottom: isValid ? "0px solid #ccc" : "5px solid red",
   };
 
-  return <div id="yaml-editor" style={editorStyle} />;
+  return (
+    <div>
+      <h2>YAML</h2>
+      <div id="yaml-editor" style={editorStyle} />
+    </div>
+  );
 };
 
 export default YamlEditor;

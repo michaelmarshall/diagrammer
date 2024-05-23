@@ -10,8 +10,18 @@ const SvgDiagram: React.FC<SvgDiagramProps> = ({ jsonData }) => {
   const scrollableRef = useRef<HTMLDivElement>(null);
   const [svgFile, setSvgFile] = useState<string>("");
 
-  const [svgWidth, setSvgWidth] = useState("20000px")
-  const [svgHeight, setSvgHeight] = useState("10000px")
+  const [svgWidth, setSvgWidth] = useState("20000px");
+  const [svgHeight, setSvgHeight] = useState("10000px");
+
+  const handleDownload = () => {
+    const blob = new Blob([svgFile], { type: "image/svg+xml" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "diagram.svg";
+    link.click();
+    URL.revokeObjectURL(url);
+  };
 
   function convertJsonToSvgElements(json: any): SvgElement {
     function createSvgElement(
@@ -121,16 +131,24 @@ const SvgDiagram: React.FC<SvgDiagramProps> = ({ jsonData }) => {
   }, [jsonData]);
 
   return (
-    <div
-      className="svg-container"
-      ref={scrollableRef}
-      dangerouslySetInnerHTML={{ __html: svgFile }}
-      style={{
-        width: "10000px",
-        height: "10000px",
-        overflow: "scroll"
-      }}
-    />
+    <div>
+      <div className="svg-header">
+        <h2>SVG</h2>
+        <span>
+          <button onClick={handleDownload}>Download</button>
+        </span>
+      </div>
+      <div
+        className="svg-container"
+        ref={scrollableRef}
+        dangerouslySetInnerHTML={{ __html: svgFile }}
+        style={{
+          width: "10000px",
+          height: "10000px",
+          overflow: "scroll",
+        }}
+      />
+    </div>
   );
 };
 
