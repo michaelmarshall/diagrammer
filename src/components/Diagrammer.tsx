@@ -3,7 +3,7 @@ import yaml from "js-yaml";
 import YamlEditor from "./YamlEditor";
 import JsonViewer from "./JsonViewer";
 import SvgDiagram from "./SvgDiagram";
-import { defaultText } from "./common";
+import { defaultText } from "../common/defaultYaml";
 import HtmlDiagram from "./HtmlDiagram";
 
 const Diagrammer: React.FC = () => {

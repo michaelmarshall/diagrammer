@@ -1,57 +1,50 @@
-export class Word {
-  value: string;
-
-  constructor(value: string) {
-    this.value = value;
-  }
+export type SvgBox = {
+  x: number,
+  y: number,
+  width: number,
+  height: number,
 }
 
-export class Compound {
-  firstWord: Word;
-  conjunction?: Word | null = null;
-  secondWord: Word;
-
+export class SvgElement {
   constructor(
-    firstWord: Word,
-    conjunction: Word | null = null,
-    secondWord: Word
-  ) {
-    this.firstWord = firstWord;
-    this.conjunction = conjunction;
-    this.secondWord = secondWord;
-  }
-}
+    public type: string,
+    public box: SvgBox,
+    public children: SvgElement[],
+    public childBox: SvgBox,
+  ){}
 
-export class Phrase {
-  head: Word | Compound;
-  optionalModifiers?: (Word | Compound)[] | undefined;
-
-  constructor(
-    head: Word | Compound,
-    optionalModifiers: (Word | Compound)[] | undefined = undefined
-  ) {
-    this.head = head;
-    this.optionalModifiers = optionalModifiers;
-  }
-}
-
-export class ComplexPhrase extends Phrase {
-  requiredModifiers: (Word | Compound)[];
-
-  constructor(
-    head: Word,
-    requiredModifiers: (Word | Compound)[],
-    optionalModifiers?: (Word | Compound)[] | undefined
-  ) {
-    super(head, optionalModifiers);
-    this.requiredModifiers = requiredModifiers;
-  }
-}
-
-export class Sentence {
-  items: (Phrase | ComplexPhrase)[];
-
-  constructor(items: (Phrase | ComplexPhrase)[]) {
-    this.items = items;
+  update() {
+    if (this.children.length === 0) {
+      // If there are no children, set childBox to default values
+      this.childBox = { x: 0, y: 0, width: 0, height: 0 };
+    } else {
+      // Initialize childBox with the box of the first child
+      this.childBox = { ...this.children[0].box };
+  
+      // Iterate over the remaining children
+      for (let i = 1; i < this.children.length; i++) {
+        const childBox = this.children[i].box;
+  
+        // Update the x-coordinate of childBox
+        this.childBox.x = Math.min(this.childBox.x, childBox.x);
+  
+        // Update the y-coordinate of childBox
+        this.childBox.y = Math.min(this.childBox.y, childBox.y);
+  
+        // Update the width of childBox
+        const rightEdge = Math.max(
+          this.childBox.x + this.childBox.width,
+          childBox.x + childBox.width
+        );
+        this.childBox.width = rightEdge - this.childBox.x;
+  
+        // Update the height of childBox
+        const bottomEdge = Math.max(
+          this.childBox.y + this.childBox.height,
+          childBox.y + childBox.height
+        );
+        this.childBox.height = bottomEdge - this.childBox.y;
+      }
+    }
   }
 }
