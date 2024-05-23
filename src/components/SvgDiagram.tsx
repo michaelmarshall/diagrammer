@@ -98,7 +98,7 @@ const SvgDiagram: React.FC<SvgDiagramProps> = ({ jsonData }) => {
     const textX = x + width / 2;
     const textY = y + height / 2;
 
-    const svgText = `<text x="${textX}" y="${textY}" color="white" text-anchor="middle" dominant-baseline="central">${type}</text>`;
+    const svgText = `<text x="${textX}" y="${textY}" fill="yellow" text-anchor="middle" dominant-baseline="central">${type}</text>`;
 
     const childrenContent = children.map(generateSvgContent).join("");
 
