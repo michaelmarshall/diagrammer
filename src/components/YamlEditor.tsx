@@ -57,7 +57,7 @@ const YamlEditor: React.FC<YamlEditorProps> = ({ yamlText, onYamlChange }) => {
 
   const editorStyle: React.CSSProperties = {
     width: "100%",
-    minHeight: "1500px",
+    minHeight: "500px",
     borderTop: isValid ? "0px solid #ccc" : "5px solid red",
     borderBottom: isValid ? "0px solid #ccc" : "5px solid red",
   };

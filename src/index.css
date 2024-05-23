@@ -23,6 +23,8 @@ code {
 
 .json-container {
   padding: 5px;
+  height: 500px;
+  overflow: scroll;
 }
 
 .error-container {
